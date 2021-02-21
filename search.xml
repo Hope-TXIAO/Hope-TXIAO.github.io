@@ -836,17 +836,10 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/alt/video.core.min.js"></script>
 <link href="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/video-js.min.css" rel="stylesheet">
 <script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/video.min.js"></script>
-    <!-- via data-setup -->
-    <video id="vid1" class="video-js" data-setup='{}'>
-        <source src="https://dl.anchoret.top/download/sky.mp4">
-    </video>
-
-<pre><code>&lt;!-- via code --&gt;
-&lt;video id=&quot;vid1&quot; class=&quot;video-js&quot;&gt;
-    &lt;source src=&quot;https://dl.anchoret.top/download/sky.mp4&quot;&gt;
-&lt;/video&gt;
-
-const player = videojs(&#39;vid1&#39;, &#123;&#125;);</code></pre>
+<video id="vid1" class="video-js">
+<source src="https://dl.anchoret.top/download/sky.mp4">
+</video>
+ const player = videojs('vid1', {});
 </html>
 晨岛的钟声再次响起，却已是独自一人
 ]]></content>
