@@ -209,7 +209,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-02-21 00:00:00 / 修改时间：15:51:26" itemprop="dateCreated datePublished" datetime="2021-02-21T00:00:00+08:00">2021-02-21</time>
+              <time title="创建时间：2021-02-21 00:00:00 / 修改时间：15:39:36" itemprop="dateCreated datePublished" datetime="2021-02-21T00:00:00+08:00">2021-02-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,13 +233,20 @@
 
       
           <html>
-<iframe 
-    width="800" 
-    height="450" 
-    src="https://dl.anchoret.top/download/sky.mp4"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
+<script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/alt/video.core.min.js"></script>
+<link href="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/video-js.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/video.min.js"></script>
+    <!-- via data-setup -->
+    <video id="vid1" class="video-js" data-setup='{}'>
+        <source src="https://dl.anchoret.top/download/sky.mp4">
+    </video>
+
+<pre><code>&lt;!-- via code --&gt;
+&lt;video id=&quot;vid1&quot; class=&quot;video-js&quot;&gt;
+    &lt;source src=&quot;https://dl.anchoret.top/download/sky.mp4&quot;&gt;
+&lt;/video&gt;
+
+const player = videojs(&#39;vid1&#39;, &#123;&#125;);</code></pre>
 </html>
 晨岛的钟声再次响起，却已是独自一人
 
