@@ -832,15 +832,17 @@
   <entry>
     <title>人生就像一场盛大的告别</title>
     <url>/2021/02/21/2021-02-21-%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/city.jpg" alt="P"></p>
-<p>晨岛的钟声再次响起，却已是独自一人</p>
+    <content><![CDATA[<html>
 <iframe 
     width="800" 
     height="450" 
     src="https://dl.anchoret.top/download/sky.mp4"
     frameborder="0" 
     allowfullscreen>
-</iframe>]]></content>
+</iframe>
+</html>
+晨岛的钟声再次响起，却已是独自一人
+]]></content>
       <categories>
         <category>Life</category>
       </categories>
