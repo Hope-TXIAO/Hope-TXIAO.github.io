@@ -833,7 +833,7 @@
     <title>人生就像一场盛大的告别</title>
     <url>/2021/02/21/2021-02-21-%E9%9A%8F%E7%AC%94/</url>
     <content><![CDATA[<html>
-<link rel="stylesheet" type="text/css" href="https://www.52player.cn/Demos/html5css3player/css/willesPlay.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/play.css"/>
 <script src="https://www.52player.cn/Demos/html5css3player/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://www.52player.cn/Demos/html5css3player/js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
 <div class="container">
