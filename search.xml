@@ -4,20 +4,23 @@
     <title>人生就像一场盛大的告别</title>
     <url>/2021/02/21/bye/</url>
     <content><![CDATA[<!DOCTYPE html>
-<html lang="zh">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" href="dist/css/ckin.css">
-<body>
-<section class="demo-section demo-section--light" id="demo">
-    <div class="container">
-    <video src="https://dl.anchoret.top/download/sky.mp4" data-ckin="default" data-overlay="1" data-title="致曾经的第五人格..."></video>    
-    </div>
-</section>
-<script src="dist/js/ckin.js"></script>
-</body>
+<meta charset="utf-8">
+<link href="css/video-js-min.css" rel="stylesheet">
+<div style="width:600px" >
+    <video id="my-video">
+         <source src="https://dl.anchoret.top/download/sky.mp4" type="video/mp4">     
+    </video>
+</div>
+<script src="js/video-min.js"></script>
+<script>
+var Options={
+    "autoplay":false,
+    "volume":80,
+    "currentTime":0,
+}
+var Video=new video();    
+Video.init('my-video',Options); //init(id,Options);id为必填，Options为选填
+</script>
 </html>
 晨岛的钟声再次响起，却已是独自一人
 ]]></content>
@@ -859,22 +862,23 @@
     <title>如果有一天</title>
     <url>/2021/02/28/id5/</url>
     <content><![CDATA[<!DOCTYPE html>
-<html lang="zh">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" href="css/demo.css">
-<link rel="stylesheet" href="dist/css/ckin.css">
-<body>
-<section class="demo-section demo-section--light" id="demo">
-    <div class="container">
-    <video src="https://dl.anchoret.top/download/id5.mp4" data-ckin="default" data-overlay="1" data-title="致曾经的第五人格..."></video>    
-    </div>
-</section>
-<script src="dist/js/ckin.js"></script>
-</body>
+<meta charset="utf-8">
+<link href="css/video-js-min.css" rel="stylesheet">
+<div style="width:600px" >
+    <video id="my-video">
+         <source src="https://dl.anchoret.top/download/id5.mp4" type="video/mp4">     
+    </video>
+</div>
+<script src="js/video-min.js"></script>
+<script>
+var Options={
+    "autoplay":false,
+    "volume":80,
+    "currentTime":0,
+}
+var Video=new video();    
+Video.init('my-video',Options); //init(id,Options);id为必填，Options为选填
+</script>
 </html>
 即使狼嚎声已经听过无数遍，可每一次仍心存震撼
 ]]></content>
