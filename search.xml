@@ -869,8 +869,8 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
   <entry>
     <title>第五人格-致曾经</title>
     <url>/2021/02/28/id5/</url>
-    <content><![CDATA[<center>
-![sky](https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/idv.jpg)
+    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/idv.jpg" alt="sky"></p>
+<center>
 即使狼嚎声已经听过无数遍，可每一次仍心存震撼
 
 <p>阅读全文查看视频</p>
