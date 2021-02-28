@@ -3,10 +3,14 @@
   <entry>
     <title>人生就像一场盛大的告别</title>
     <url>/2021/02/21/bye/</url>
-    <content><![CDATA[<!DOCTYPE html>
+    <content><![CDATA[<p>晨岛的钟声再次响起，却已是独自一人</p>
+<pre><code>                                ---阅读全文查看视频</code></pre>
+<a id="more"></a>
+
+<!DOCTYPE html>
 <meta charset="utf-8">
 <link href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/video-js-min.css" rel="stylesheet">
-<div style="width:600px" >
+<div style="width:400px" >
     <video id="my-video">
          <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/sky.mp4" type="video/mp4">     
     </video>
@@ -22,7 +26,6 @@ var Video=new video();
 Video.init('my-video',Options); //init(id,Options);id为必填，Options为选填
 </script>
 </html>
-晨岛的钟声再次响起，却已是独自一人
 ]]></content>
       <categories>
         <category>Life</category>
@@ -859,12 +862,16 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
       </categories>
   </entry>
   <entry>
-    <title>如果有一天</title>
+    <title>第五人格-致曾经</title>
     <url>/2021/02/28/id5/</url>
-    <content><![CDATA[<!DOCTYPE html>
+    <content><![CDATA[<p>即使狼嚎声已经听过无数遍，可每一次仍心存震撼</p>
+<pre><code>                                  ---阅读全文查看视频</code></pre>
+<a id="more"></a>
+
+<!DOCTYPE html>
 <meta charset="utf-8">
 <link href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/video-js-min.css" rel="stylesheet">
-<div style="width:600px" >
+<div style="width:400px" >
     <video id="my-video">
          <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/id5.mp4" type="video/mp4">     
     </video>
@@ -880,7 +887,7 @@ var Video=new video();
 Video.init('my-video',Options); //init(id,Options);id为必填，Options为选填
 </script>
 </html>
-即使狼嚎声已经听过无数遍，可每一次仍心存震撼
+
 ]]></content>
       <categories>
         <category>Life</category>
