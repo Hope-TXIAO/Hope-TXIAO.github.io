@@ -98,7 +98,6 @@ video {
   height: 100%;
   width: 100%;
   z-index: 10000000;
-  background: #000;
   border-radius: 0 !important;
   display: -ms-flexbox;
   display: flex;
@@ -108,13 +107,6 @@ video {
   position: relative;
 }
 
-.ckin__overlay:before {
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
-}
-
-.ckin__overlay--2:before {
-  background: rgba(24, 24, 24, 0.8);
-}
 
 .default {
   border: 0 solid rgba(0, 0, 0, 0.2);
@@ -150,7 +142,6 @@ video {
 }
 
 .default__button {
-  background: none;
   border: 0;
   line-height: 1;
   color: #00CF7D;
@@ -171,7 +162,6 @@ video {
 }
 
 .default__button--big {
-  background: none;
   border: 0;
   line-height: 1;
   color: #00CF7D;
@@ -207,7 +197,6 @@ video {
   transition: all .3s;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
   font-size: 32px;
   -ms-flex-align: center;
       align-items: center;
@@ -252,14 +241,12 @@ video {
   display: flex;
   height: 10px;
   transition: height 0.3s;
-  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border-radius: 4px;
 }
 
 .default .progress__filled {
   width: 0%;
-  background: #00CF7D;
   -ms-flex: 0;
       flex: 0;
   -ms-flex-preferred-size: 0%;
@@ -301,7 +288,6 @@ video {
 }
 
 .minimal__button {
-  background: none;
   border: 0;
   line-height: 1;
   color: #00CF7D;
@@ -322,7 +308,6 @@ video {
 }
 
 .minimal__button--big {
-  background: none;
   border: 0;
   line-height: 1;
   color: #00CF7D;
@@ -358,7 +343,6 @@ video {
   transition: all .3s;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #242424;
   font-size: 32px;
   -ms-flex-align: center;
       align-items: center;
@@ -403,14 +387,12 @@ video {
   display: flex;
   height: 10px;
   transition: height 0.3s;
-  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border-radius: 4px;
 }
 
 .minimal .progress__filled {
   width: 0%;
-  background: #00CF7D;
   -ms-flex: 0;
       flex: 0;
   -ms-flex-preferred-size: 0%;
@@ -451,7 +433,6 @@ video {
 }
 
 .compact__button {
-  background: none;
   border: 0;
   line-height: 1;
   color: #00CF7D;
@@ -472,7 +453,6 @@ video {
 }
 
 .compact__button--big {
-  background: none;
   border: 0;
   line-height: 1;
   color: #00CF7D;
@@ -509,7 +489,6 @@ video {
   transition: all .3s;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #242424;
   font-size: 32px;
   -ms-flex-align: center;
       align-items: center;
@@ -554,14 +533,12 @@ video {
   display: flex;
   height: 10px;
   transition: height 0.3s;
-  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border-radius: 4px;
 }
 
 .compact .progress__filled {
   width: 0%;
-  background: #00CF7D;
   -ms-flex: 0;
       flex: 0;
   -ms-flex-preferred-size: 0%;

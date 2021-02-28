@@ -336,7 +336,6 @@ function addColor(player, color) {
     if (typeof color != 'undefined' && color != '') {
         var buttons = player.querySelectorAll('button');
         var progress = player.querySelector('.progress__filled');
-        progress.style.background = color;
         buttons.forEach(function (button) {
             return button.style.color = color;
         });
