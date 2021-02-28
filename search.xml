@@ -5,13 +5,13 @@
     <url>/2021/02/21/bye/</url>
     <content><![CDATA[<!DOCTYPE html>
 <meta charset="utf-8">
-<link href="css/video-js-min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/video-js-min.css" rel="stylesheet">
 <div style="width:600px" >
     <video id="my-video">
          <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/sky.mp4" type="video/mp4">     
     </video>
 </div>
-<script src="js/video-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/video-min.js"></script>
 <script>
 var Options={
     "autoplay":false,
@@ -863,13 +863,13 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
     <url>/2021/02/28/id5/</url>
     <content><![CDATA[<!DOCTYPE html>
 <meta charset="utf-8">
-<link href="css/video-js-min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/video-js-min.css" rel="stylesheet">
 <div style="width:600px" >
     <video id="my-video">
          <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/id5.mp4" type="video/mp4">     
     </video>
 </div>
-<script src="js/video-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/video-min.js"></script>
 <script>
 var Options={
     "autoplay":false,
