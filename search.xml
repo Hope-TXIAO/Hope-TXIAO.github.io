@@ -8,7 +8,7 @@
 <link href="css/video-js-min.css" rel="stylesheet">
 <div style="width:600px" >
     <video id="my-video">
-         <source src="https://dl.anchoret.top/download/sky.mp4" type="video/mp4">     
+         <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/sky.mp4" type="video/mp4">     
     </video>
 </div>
 <script src="js/video-min.js"></script>
@@ -866,7 +866,7 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
 <link href="css/video-js-min.css" rel="stylesheet">
 <div style="width:600px" >
     <video id="my-video">
-         <source src="https://dl.anchoret.top/download/id5.mp4" type="video/mp4">     
+         <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/id5.mp4" type="video/mp4">     
     </video>
 </div>
 <script src="js/video-min.js"></script>
