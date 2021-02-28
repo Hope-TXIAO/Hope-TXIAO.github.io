@@ -4,21 +4,7 @@
     <title>人生就像一场盛大的告别</title>
     <url>/2021/02/21/bye/</url>
     <content><![CDATA[<html>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/play.css"/>
-<script src="https://www.52player.cn/Demos/html5css3player/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://www.52player.cn/Demos/html5css3player/js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
-<div class="container">
-<div class="row">
-  <div class="col-md-12">
-      <div id="willesPlay">
-    <div class="playContent">
-<video width="100%" height="100%" id="playVideo"><source src="https://dl.anchoret.top/download/sky.mp4" type="video/mp4"></source></video>
-    <div class="playTip glyphicon glyphicon-play"></div>
-    </div>
-  <div class="playControll">
-<div class="playPause playIcon"></div>
-  </div>
-</div>
+<video src="https://dl.anchoret.top/download/sky.mp4" controls="controls"></video>
 </html>
 晨岛的钟声再次响起，却已是独自一人
 ]]></content>
@@ -851,6 +837,18 @@
 <p>发布于 2020-08-16</p>
 <h2 id="匿名用户20"><a href="#匿名用户20" class="headerlink" title="匿名用户20"></a>匿名用户20</h2><p>以前高三假期补课，还需要我们自己掏钱给补课费，关键是补课必须都参加。教育局明确说了，不能补课，否则就是违规操作。这简直就是高级的捆绑式消费。我回去给家长说了一下情况后，家长就给班主任打电话看可不可以不交钱，否则就去教育局说明一下情况。最后，班主任怕我们告到教育局 ，为了不把事情闹大，让我写了一个“贫困生不缴补课费的申请书”？？？然后叫我不要给班里其他同学说我没有交补课费。。。。总之班主任都不考虑学生的情况，都是为了自己的利益。这一点很恶心。但我高三还是遇到了很好很负责的老师。</p>
 <p>发布于 2020-07-07</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如果有一天</title>
+    <url>/2021/02/28/id5/</url>
+    <content><![CDATA[<html>
+<video src="https://dl.anchoret.top/download/id5.mp4" controls="controls"></video>
+</html>
+即使狼嚎声已经听过无数遍，可每一次仍心存震撼
 ]]></content>
       <categories>
         <category>Life</category>
