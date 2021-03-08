@@ -919,7 +919,14 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
 <p>此时主题载入完成，存放于根目录\themes中</p>
 <p>为了方便，我们将根目录下的<em>config.yml</em>称为站点配置文件<br>下载的主题里的<em>config.yml</em>称为主题配置文件</p>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>安装完成后 我们使用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">````</span><br><span class="line">初始化我们的网站</span><br><span class="line"></span><br><span class="line">然后打开[localhost:4000](http://localhost:4000/)验证是否成功配置完成</span><br><span class="line"></span><br><span class="line">使用*Ctrl+C*退出本地站点服务器</span><br><span class="line"></span><br><span class="line">现在，请前往步骤3.1</span><br><span class="line"></span><br><span class="line"><span class="comment">## 本地站点配置</span></span><br><span class="line">打开站点配置文件，滑到底部，将步骤3中链接复制，并修改参数和站点个人信息，如图所示</span><br><span class="line">![P](https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/1.jpg)</span><br><span class="line">![P2](https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/2.jpg)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 连接至GitHub</span></span><br><span class="line">打开Git，<span class="built_in">cd</span>到你的文件夹，然后输入以下命令</span><br><span class="line">```bash</span><br><span class="line">git config --global user.name 你的GitHub用户名</span><br><span class="line">git config --global user.email 你的注册邮箱</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>初始化我们的网站</p>
+<p>然后打开<a href="http://localhost:4000/">localhost:4000</a>验证是否成功配置完成</p>
+<p>使用<em>Ctrl+C</em>退出本地站点服务器</p>
+<p>现在，请前往步骤3.1</p>
+<h2 id="本地站点配置"><a href="#本地站点配置" class="headerlink" title="本地站点配置"></a>本地站点配置</h2><p>打开站点配置文件，滑到底部，将步骤3中链接复制，并修改参数和站点个人信息，如图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/1.jpg" alt="P"><br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/2.jpg" alt="P2"></p>
+<h2 id="连接至GitHub"><a href="#连接至GitHub" class="headerlink" title="连接至GitHub"></a>连接至GitHub</h2><p>打开Git，cd到你的文件夹，然后输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name 你的GitHub用户名</span><br><span class="line">git config --global user.email 你的注册邮箱</span><br></pre></td></tr></table></figure>
 <p>打开<a href="https://github.com/">GitHub</a>，在头像下方点击<em>Settings</em>,再点击<em>SSH and GPG keys</em>，新建一个SSH，名字可随意填写</p>
 <p>回到Git，输入以下内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
@@ -937,7 +944,7 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span>: <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
 <p>如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/5.jpg" alt="P5"></p>
 <h2 id="完成配置"><a href="#完成配置" class="headerlink" title="完成配置"></a>完成配置</h2><p>重复步骤2.4，检查是否配置正常，若无异常，请前往步骤3.2</p>
-<h1 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h1><h2 id="前提操作-若已有仓库请前往步骤3-2"><a href="#前提操作-若已有仓库请前往步骤3-2" class="headerlink" title="前提操作(若已有仓库请前往步骤3.2)"></a>前提操作(若已有仓库请前往步骤3.2)</h2><p>在GitHub创建一个属于您的账号并登入然后点击如图所示的按钮新建一个你自己的仓库<br><img data-src="!%5BP%5D(https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/3.jpg)" alt="P3"><br>在Repository name处填写如下内容</p>
+<h1 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h1><h2 id="前提操作-若已有仓库请前往步骤3-2"><a href="#前提操作-若已有仓库请前往步骤3-2" class="headerlink" title="前提操作(若已有仓库请前往步骤3.2)"></a>前提操作(若已有仓库请前往步骤3.2)</h2><p>在GitHub创建一个属于您的账号并登入然后点击如图所示的按钮新建一个你自己的仓库<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/3.jpg" alt="P3">)<br>在Repository name处填写如下内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">你的用户名.github.io</span><br></pre></td></tr></table></figure>
 <p>若希望公开本仓库则选择public，若不希望公开则选择private</p>
 <p>此时只能使用Netlify进行部署，见步骤4.1</p>
