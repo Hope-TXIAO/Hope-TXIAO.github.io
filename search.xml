@@ -958,8 +958,7 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
 <h1 id="配置CloudFlare-CDN"><a href="#配置CloudFlare-CDN" class="headerlink" title="配置CloudFlare CDN"></a>配置CloudFlare CDN</h1><h2 id="基础操作-初步配置"><a href="#基础操作-初步配置" class="headerlink" title="基础操作-初步配置"></a>基础操作-初步配置</h2><p>前往cloudflare合作平台<a href="https://cdn.bnxb.com/">笨牛网</a>，注册一个账号，完成后登录，然后在域名接入处添加域名,回源方式选择<em>CNAME回源</em>，回源地址请填写你的Github Pages地址或Netlify页面地址<br>然后提交即完成，进入域名管理，解析设置，添加你需要的解析,如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/6.jpg" alt="P6"><br>至于其他设置，可以自己慢慢琢磨<br>##域名解析<br>现在进入你的域名服务商，配置好解析到cloudflare，具体方法就在上一步骤中解析页面下方，如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/7.jpg" alt="P7"><br>解析完成后，所有基本设置已经设置完全</p>
 <h2 id="进阶CDN设置"><a href="#进阶CDN设置" class="headerlink" title="进阶CDN设置"></a>进阶CDN设置</h2><p>可以加速cloudflare解析速度，等待编写中</p>
 <h1 id="最终提示"><a href="#最终提示" class="headerlink" title="最终提示"></a>最终提示</h1><h2 id="博客存放位置"><a href="#博客存放位置" class="headerlink" title="博客存放位置"></a>博客存放位置</h2><p>默认存放于</p>
-<p>```bash<br>根目录<em>\source_posts\</em>中，使用markdown语法</p>
-]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">根目录*\<span class="built_in">source</span>\_posts\*中，使用markdown语法</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
