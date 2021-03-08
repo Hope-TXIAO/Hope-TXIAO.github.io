@@ -913,7 +913,7 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init 你喜欢的名字作为文件夹名称</span><br><span class="line"><span class="built_in">cd</span> 新建的文件夹名称</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <h2 id="Git基本部署-Mac"><a href="#Git基本部署-Mac" class="headerlink" title="Git基本部署(Mac)"></a>Git基本部署(Mac)</h2><p>和Windows类似 但是需要在npm前加入<em>sudo</em>，像</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="主题载入"><a href="#主题载入" class="headerlink" title="主题载入"></a>主题载入</h2><p>继续刚才的步骤,输入主题安装命令(在1.2中可前往主题官网获取最新命令和教程)</p>
+<h2 id="主题载入"><a href="#主题载入" class="headerlink" title="主题载入"></a>主题载入</h2><p>继续刚才的步骤,输入主题安装命令(在步骤1.2中可前往主题官网获取最新命令和教程)</p>
 <p>这里以Next举例(此时的状态为你已经cd到你的文件夹)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <p>此时主题载入完成，存放于根目录\themes中</p>
