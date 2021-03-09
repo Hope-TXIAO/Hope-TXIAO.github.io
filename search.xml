@@ -74,6 +74,103 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
       </categories>
   </entry>
   <entry>
+    <title>Hexo+Netlify+CloudFlare部署教程</title>
+    <url>/2021/03/08/hexo/</url>
+    <content><![CDATA[<p>网上看了很多教程，很多都少了步骤，所以决定自己写写。</p>
+<a id="more"></a>
+
+<h1 id="基本环境搭建-Windows"><a href="#基本环境搭建-Windows" class="headerlink" title="基本环境搭建(Windows)"></a>基本环境搭建(Windows)</h1><h2 id="Node-js-amp-Git"><a href="#Node-js-amp-Git" class="headerlink" title="Node.js&amp;Git"></a>Node.js&amp;Git</h2><p>作为部署必备二件套，不想多说<br>下载链接:<a href="https://nodejs.org/zh-cn/download/">Node.js</a> <a href="https://git-scm.com/">Git</a></p>
+<h2 id="Hexo主题-请勿直接下载"><a href="#Hexo主题-请勿直接下载" class="headerlink" title="Hexo主题(请勿直接下载)"></a>Hexo主题(请勿直接下载)</h2><p>个人推荐最多使用的Next或者更美观的Butterfly(移动端有bug)<br>GitHub:<a href="https://github.com/theme-next/hexo-theme-next">Next</a> <a href="https://butterfly.js.org/">Butterfly</a></p>
+<h1 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h1><h2 id="Git基本部署-Windows"><a href="#Git基本部署-Windows" class="headerlink" title="Git基本部署(Windows)"></a>Git基本部署(Windows)</h2><p>打开Git，输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init 你喜欢的名字作为文件夹名称</span><br><span class="line"><span class="built_in">cd</span> 新建的文件夹名称</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h2 id="Git基本部署-Mac"><a href="#Git基本部署-Mac" class="headerlink" title="Git基本部署(Mac)"></a>Git基本部署(Mac)</h2><p>和Windows类似 但是需要在npm前加入<em>sudo</em>，像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="主题载入"><a href="#主题载入" class="headerlink" title="主题载入"></a>主题载入</h2><p>继续刚才的步骤,输入主题安装命令(在步骤1.2中可前往主题官网获取最新命令和教程)</p>
+<p>这里以Next举例(此时的状态为你已经cd到你的文件夹)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>此时主题载入完成，存放于根目录\themes中</p>
+<p>为了方便，我们将根目录下的<em>config.yml</em>称为站点配置文件<br>下载的主题里的<em>config.yml</em>称为主题配置文件</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>安装完成后 我们使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>初始化我们的网站</p>
+<p>然后打开<a href="http://localhost:4000/">localhost:4000</a>验证是否成功配置完成</p>
+<p>使用<em>Ctrl+C</em>退出本地站点服务器</p>
+<p>现在，请前往步骤3.1</p>
+<h2 id="本地站点配置"><a href="#本地站点配置" class="headerlink" title="本地站点配置"></a>本地站点配置</h2><p>打开站点配置文件，滑到底部，将步骤3中链接复制，并修改参数和站点个人信息，如图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/1.jpg" alt="P"><br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/2.jpg" alt="P2"></p>
+<h2 id="连接至GitHub"><a href="#连接至GitHub" class="headerlink" title="连接至GitHub"></a>连接至GitHub</h2><p>打开Git，cd到你的文件夹，然后输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name 你的GitHub用户名</span><br><span class="line">git config --global user.email 你的注册邮箱</span><br></pre></td></tr></table></figure>
+<p>打开<a href="https://github.com/">GitHub</a>，在头像下方点击<em>Settings</em>,再点击<em>SSH and GPG keys</em>，新建一个SSH，名字可随意填写</p>
+<p>回到Git，输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>将输出的内容，粘贴至GitHub处，然后确认保存</p>
+<p>回到Git，输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果出现你的用户名，如下图所示，则为连接成功<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/4.jpg" alt="P4"></p>
+<h2 id="新建Hexo分类等页面"><a href="#新建Hexo分类等页面" class="headerlink" title="新建Hexo分类等页面"></a>新建Hexo分类等页面</h2><p>这里举例添加分类页面(不添加则可能出现打开分类为404的问题)</p>
+<h3 id="确认站点配置文件"><a href="#确认站点配置文件" class="headerlink" title="确认站点配置文件"></a>确认站点配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">category_dir: categories</span><br></pre></td></tr></table></figure>
+<h3 id="确认主题配置文件"><a href="#确认主题配置文件" class="headerlink" title="确认主题配置文件"></a>确认主题配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories: /categories</span><br></pre></td></tr></table></figure>
+<p>一般只需要删除符号’#’</p>
+<h3 id="新建分类文件"><a href="#新建分类文件" class="headerlink" title="新建分类文件"></a>新建分类文件</h3><p>在Git中输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>然后进入<em>C:\Users\用户名\文件夹\source\categories</em>并打开编辑<em>index.md</em>，添加</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span>: <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/5.jpg" alt="P5"></p>
+<h2 id="完成配置"><a href="#完成配置" class="headerlink" title="完成配置"></a>完成配置</h2><p>重复步骤2.4，检查是否配置正常，若无异常，请前往步骤3.2</p>
+<h1 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h1><h2 id="前提操作-若已有仓库请前往步骤3-2"><a href="#前提操作-若已有仓库请前往步骤3-2" class="headerlink" title="前提操作(若已有仓库请前往步骤3.2)"></a>前提操作(若已有仓库请前往步骤3.2)</h2><p>在GitHub创建一个属于您的账号并登入然后点击如图所示的按钮新建一个你自己的仓库<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/3.jpg" alt="P3">)<br>在Repository name处填写如下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">你的用户名.github.io</span><br></pre></td></tr></table></figure>
+<p>若希望公开本仓库则选择public，若不希望公开则选择private</p>
+<p>此时只能使用Netlify进行部署，见步骤4.1</p>
+<p>创建完成后，记录如图所示的链接，现在请前往步骤2.5</p>
+<h2 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h2><p>在Git中输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>完成后，你的博客已成功同步至GitHub，若你之前选择的是Private，请直接前往步骤4.1，若你之前选择的是Public，请进入你的GitHub仓库，点击Settings,下拉找到GitHub Pages，选择你的页面(一般是master)，然后自定义你的域名，由于国内网络封锁导致GitHub Pages不能正常访问，请前往步骤5.1</p>
+<h1 id="配置Netlify"><a href="#配置Netlify" class="headerlink" title="配置Netlify"></a>配置Netlify</h1><h2 id="配置Netlify-1"><a href="#配置Netlify-1" class="headerlink" title="配置Netlify"></a>配置Netlify</h2><p>由于你选择了Private，所以必须使用Netlify才能访问</p>
+<p>打开<a href="https://app.netlify.com/">Netlify</a>，使用GitHub登录并授权，授权完成后，点击<em>New site from Git</em>，选择<em>GitHub</em>，选择你的仓库，然后直接点击Deploy Site，然后就部署完成了</p>
+<p>进入部署完成的Sites点击<em>Site Settings</em>，然后点击<em>Change site name</em>，将其更名为你喜欢的名字(请保存或记住。待会需要用到)，然后点击左侧的<em>Domain management</em>，点击<em>Add domain alias</em>，输入你的域名即完成</p>
+<h1 id="配置CloudFlare-CDN"><a href="#配置CloudFlare-CDN" class="headerlink" title="配置CloudFlare CDN"></a>配置CloudFlare CDN</h1><h2 id="基础操作-初步配置"><a href="#基础操作-初步配置" class="headerlink" title="基础操作-初步配置"></a>基础操作-初步配置</h2><p>前往cloudflare合作平台<a href="https://cdn.bnxb.com/">笨牛网</a>，注册一个账号，完成后登录，然后在域名接入处添加域名,回源方式选择<em>CNAME回源</em>，回源地址请填写你的Github Pages地址或Netlify页面地址<br>然后提交即完成，进入域名管理，解析设置，添加你需要的解析,如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/6.jpg" alt="P6"><br>至于其他设置，可以自己慢慢琢磨<br>##域名解析<br>现在进入你的域名服务商，配置好解析到cloudflare，具体方法就在上一步骤中解析页面下方，如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/7.jpg" alt="P7"><br>解析完成后，所有基本设置已经设置完全</p>
+<h2 id="进阶CDN设置"><a href="#进阶CDN设置" class="headerlink" title="进阶CDN设置"></a>进阶CDN设置</h2><p>可以加速cloudflare解析速度，等待编写中</p>
+<h1 id="最终提示"><a href="#最终提示" class="headerlink" title="最终提示"></a>最终提示</h1><h2 id="博客存放位置"><a href="#博客存放位置" class="headerlink" title="博客存放位置"></a>博客存放位置</h2><p>默认存放于</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">根目录*\<span class="built_in">source</span>\_posts\*中，使用markdown语法</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>第五人格-致曾经</title>
+    <url>/2021/02/28/id5/</url>
+    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/idv.jpg" alt="sky"></p>
+<center>
+即使狼嚎声已经听过无数遍，可每一次仍心存震撼
+
+<p>阅读全文查看视频</p>
+<a id="more"></a>
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/video-js-min.css" rel="stylesheet">
+<div style="width:400px" >
+    <video id="my-video">
+         <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/id5.mp4" type="video/mp4">     
+    </video>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/video-min.js"></script>
+<script>
+var Options={
+    "autoplay":false,
+    "volume":80,
+    "currentTime":0,
+}
+var Video=new video();    
+Video.init('my-video',Options); //init(id,Options);id为必填，Options为选填
+</script>
+</html>
+
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+  </entry>
+  <entry>
     <title>人病</title>
     <url>/2019/08/04/%E4%BA%BA%E7%97%85/</url>
     <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/articles/11.JPG" alt="P"></p>
@@ -864,103 +961,6 @@ Video.init('my-video',Options); //init(id,Options);id为必填，Options为选�
 ]]></content>
       <categories>
         <category>Life</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>第五人格-致曾经</title>
-    <url>/2021/02/28/id5/</url>
-    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/idv.jpg" alt="sky"></p>
-<center>
-即使狼嚎声已经听过无数遍，可每一次仍心存震撼
-
-<p>阅读全文查看视频</p>
-<a id="more"></a>
-
-<!DOCTYPE html>
-<meta charset="utf-8">
-<link href="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/css/video-js-min.css" rel="stylesheet">
-<div style="width:400px" >
-    <video id="my-video">
-         <source src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/download/id5.mp4" type="video/mp4">     
-    </video>
-</div>
-<script src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/assets/js/video-min.js"></script>
-<script>
-var Options={
-    "autoplay":false,
-    "volume":80,
-    "currentTime":0,
-}
-var Video=new video();    
-Video.init('my-video',Options); //init(id,Options);id为必填，Options为选填
-</script>
-</html>
-
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hexo+Netlify+CloudFlare部署教程</title>
-    <url>/2021/03/08/hexo/</url>
-    <content><![CDATA[<p>网上看了很多教程，很多都少了步骤，所以决定自己写写。</p>
-<a id="more"></a>
-
-<h1 id="基本环境搭建-Windows"><a href="#基本环境搭建-Windows" class="headerlink" title="基本环境搭建(Windows)"></a>基本环境搭建(Windows)</h1><h2 id="Node-js-amp-Git"><a href="#Node-js-amp-Git" class="headerlink" title="Node.js&amp;Git"></a>Node.js&amp;Git</h2><p>作为部署必备二件套，不想多说<br>下载链接:<a href="https://nodejs.org/zh-cn/download/">Node.js</a> <a href="https://git-scm.com/">Git</a></p>
-<h2 id="Hexo主题-请勿直接下载"><a href="#Hexo主题-请勿直接下载" class="headerlink" title="Hexo主题(请勿直接下载)"></a>Hexo主题(请勿直接下载)</h2><p>个人推荐最多使用的Next或者更美观的Butterfly(移动端有bug)<br>GitHub:<a href="https://github.com/theme-next/hexo-theme-next">Next</a> <a href="https://butterfly.js.org/">Butterfly</a></p>
-<h1 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h1><h2 id="Git基本部署-Windows"><a href="#Git基本部署-Windows" class="headerlink" title="Git基本部署(Windows)"></a>Git基本部署(Windows)</h2><p>打开Git，输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init 你喜欢的名字作为文件夹名称</span><br><span class="line"><span class="built_in">cd</span> 新建的文件夹名称</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h2 id="Git基本部署-Mac"><a href="#Git基本部署-Mac" class="headerlink" title="Git基本部署(Mac)"></a>Git基本部署(Mac)</h2><p>和Windows类似 但是需要在npm前加入<em>sudo</em>，像</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="主题载入"><a href="#主题载入" class="headerlink" title="主题载入"></a>主题载入</h2><p>继续刚才的步骤,输入主题安装命令(在步骤1.2中可前往主题官网获取最新命令和教程)</p>
-<p>这里以Next举例(此时的状态为你已经cd到你的文件夹)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>此时主题载入完成，存放于根目录\themes中</p>
-<p>为了方便，我们将根目录下的<em>config.yml</em>称为站点配置文件<br>下载的主题里的<em>config.yml</em>称为主题配置文件</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>安装完成后 我们使用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>初始化我们的网站</p>
-<p>然后打开<a href="http://localhost:4000/">localhost:4000</a>验证是否成功配置完成</p>
-<p>使用<em>Ctrl+C</em>退出本地站点服务器</p>
-<p>现在，请前往步骤3.1</p>
-<h2 id="本地站点配置"><a href="#本地站点配置" class="headerlink" title="本地站点配置"></a>本地站点配置</h2><p>打开站点配置文件，滑到底部，将步骤3中链接复制，并修改参数和站点个人信息，如图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/1.jpg" alt="P"><br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/2.jpg" alt="P2"></p>
-<h2 id="连接至GitHub"><a href="#连接至GitHub" class="headerlink" title="连接至GitHub"></a>连接至GitHub</h2><p>打开Git，cd到你的文件夹，然后输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name 你的GitHub用户名</span><br><span class="line">git config --global user.email 你的注册邮箱</span><br></pre></td></tr></table></figure>
-<p>打开<a href="https://github.com/">GitHub</a>，在头像下方点击<em>Settings</em>,再点击<em>SSH and GPG keys</em>，新建一个SSH，名字可随意填写</p>
-<p>回到Git，输入以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>将输出的内容，粘贴至GitHub处，然后确认保存</p>
-<p>回到Git，输入以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果出现你的用户名，如下图所示，则为连接成功<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/4.jpg" alt="P4"></p>
-<h2 id="新建Hexo分类等页面"><a href="#新建Hexo分类等页面" class="headerlink" title="新建Hexo分类等页面"></a>新建Hexo分类等页面</h2><p>这里举例添加分类页面(不添加则可能出现打开分类为404的问题)</p>
-<h3 id="确认站点配置文件"><a href="#确认站点配置文件" class="headerlink" title="确认站点配置文件"></a>确认站点配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">category_dir: categories</span><br></pre></td></tr></table></figure>
-<h3 id="确认主题配置文件"><a href="#确认主题配置文件" class="headerlink" title="确认主题配置文件"></a>确认主题配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories: /categories</span><br></pre></td></tr></table></figure>
-<p>一般只需要删除符号’#’</p>
-<h3 id="新建分类文件"><a href="#新建分类文件" class="headerlink" title="新建分类文件"></a>新建分类文件</h3><p>在Git中输入以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-<p>然后进入<em>C:\Users\用户名\文件夹\source\categories</em>并打开编辑<em>index.md</em>，添加</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span>: <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
-<p>如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/5.jpg" alt="P5"></p>
-<h2 id="完成配置"><a href="#完成配置" class="headerlink" title="完成配置"></a>完成配置</h2><p>重复步骤2.4，检查是否配置正常，若无异常，请前往步骤3.2</p>
-<h1 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h1><h2 id="前提操作-若已有仓库请前往步骤3-2"><a href="#前提操作-若已有仓库请前往步骤3-2" class="headerlink" title="前提操作(若已有仓库请前往步骤3.2)"></a>前提操作(若已有仓库请前往步骤3.2)</h2><p>在GitHub创建一个属于您的账号并登入然后点击如图所示的按钮新建一个你自己的仓库<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/3.jpg" alt="P3">)<br>在Repository name处填写如下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">你的用户名.github.io</span><br></pre></td></tr></table></figure>
-<p>若希望公开本仓库则选择public，若不希望公开则选择private</p>
-<p>此时只能使用Netlify进行部署，见步骤4.1</p>
-<p>创建完成后，记录如图所示的链接，现在请前往步骤2.5</p>
-<h2 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h2><p>在Git中输入以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>完成后，你的博客已成功同步至GitHub，若你之前选择的是Private，请直接前往步骤4.1，若你之前选择的是Public，请进入你的GitHub仓库，点击Settings,下拉找到GitHub Pages，选择你的页面(一般是master)，然后自定义你的域名，由于国内网络封锁导致GitHub Pages不能正常访问，请前往步骤5.1</p>
-<h1 id="配置Netlify"><a href="#配置Netlify" class="headerlink" title="配置Netlify"></a>配置Netlify</h1><h2 id="配置Netlify-1"><a href="#配置Netlify-1" class="headerlink" title="配置Netlify"></a>配置Netlify</h2><p>由于你选择了Private，所以必须使用Netlify才能访问</p>
-<p>打开<a href="https://app.netlify.com/">Netlify</a>，使用GitHub登录并授权，授权完成后，点击<em>New site from Git</em>，选择<em>GitHub</em>，选择你的仓库，然后直接点击Deploy Site，然后就部署完成了</p>
-<p>进入部署完成的Sites点击<em>Site Settings</em>，然后点击<em>Change site name</em>，将其更名为你喜欢的名字(请保存或记住。待会需要用到)，然后点击左侧的<em>Domain management</em>，点击<em>Add domain alias</em>，输入你的域名即完成</p>
-<h1 id="配置CloudFlare-CDN"><a href="#配置CloudFlare-CDN" class="headerlink" title="配置CloudFlare CDN"></a>配置CloudFlare CDN</h1><h2 id="基础操作-初步配置"><a href="#基础操作-初步配置" class="headerlink" title="基础操作-初步配置"></a>基础操作-初步配置</h2><p>前往cloudflare合作平台<a href="https://cdn.bnxb.com/">笨牛网</a>，注册一个账号，完成后登录，然后在域名接入处添加域名,回源方式选择<em>CNAME回源</em>，回源地址请填写你的Github Pages地址或Netlify页面地址<br>然后提交即完成，进入域名管理，解析设置，添加你需要的解析,如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/6.jpg" alt="P6"><br>至于其他设置，可以自己慢慢琢磨<br>##域名解析<br>现在进入你的域名服务商，配置好解析到cloudflare，具体方法就在上一步骤中解析页面下方，如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/7.jpg" alt="P7"><br>解析完成后，所有基本设置已经设置完全</p>
-<h2 id="进阶CDN设置"><a href="#进阶CDN设置" class="headerlink" title="进阶CDN设置"></a>进阶CDN设置</h2><p>可以加速cloudflare解析速度，等待编写中</p>
-<h1 id="最终提示"><a href="#最终提示" class="headerlink" title="最终提示"></a>最终提示</h1><h2 id="博客存放位置"><a href="#博客存放位置" class="headerlink" title="博客存放位置"></a>博客存放位置</h2><p>默认存放于</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">根目录*\<span class="built_in">source</span>\_posts\*中，使用markdown语法</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
       </categories>
   </entry>
 </search>
