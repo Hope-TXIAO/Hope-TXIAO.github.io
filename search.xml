@@ -66,8 +66,8 @@
 <h2 id="连接至GitHub"><a href="#连接至GitHub" class="headerlink" title="连接至GitHub"></a>连接至GitHub</h2><p>打开Git，cd到你的文件夹，然后输入以下命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name 你的GitHub用户名</span><br><span class="line">git config --global user.email 你的注册邮箱</span><br></pre></td></tr></table></figure>
 <p>打开<a href="https://github.com/">GitHub</a>，在头像下方点击<em>Settings</em>,再点击<em>SSH and GPG keys</em>，新建一个SSH，名字可随意填写</p>
-<p>回到Git，输入以下内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>回到Git，依次输入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;这里填你的登录邮件地址(带引号)&quot;</span></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>将输出的内容，粘贴至GitHub处，然后确认保存</p>
 <p>回到Git，输入以下内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
@@ -93,7 +93,8 @@
 <h1 id="配置Netlify"><a href="#配置Netlify" class="headerlink" title="配置Netlify"></a>配置Netlify</h1><h2 id="配置Netlify-1"><a href="#配置Netlify-1" class="headerlink" title="配置Netlify"></a>配置Netlify</h2><p>由于你选择了Private，所以必须使用Netlify才能访问</p>
 <p>打开<a href="https://app.netlify.com/">Netlify</a>，使用GitHub登录并授权，授权完成后，点击<em>New site from Git</em>，选择<em>GitHub</em>，选择你的仓库，然后直接点击Deploy Site，然后就部署完成了</p>
 <p>进入部署完成的Sites点击<em>Site Settings</em>，然后点击<em>Change site name</em>，将其更名为你喜欢的名字(请保存或记住。待会需要用到)，然后点击左侧的<em>Domain management</em>，点击<em>Add domain alias</em>，输入你的域名即完成</p>
-<h1 id="配置CloudFlare-CDN"><a href="#配置CloudFlare-CDN" class="headerlink" title="配置CloudFlare CDN"></a>配置CloudFlare CDN</h1><h2 id="基础操作-初步配置"><a href="#基础操作-初步配置" class="headerlink" title="基础操作-初步配置"></a>基础操作-初步配置</h2><p>前往cloudflare合作平台<a href="https://cdn.bnxb.com/">笨牛网</a>，注册一个账号，完成后登录，然后在域名接入处添加域名,回源方式选择<em>CNAME回源</em>，回源地址请填写你的Github Pages地址或Netlify页面地址<br>然后提交即完成，进入域名管理，解析设置，添加你需要的解析,如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/6.jpg" alt="P6"><br>至于其他设置，可以自己慢慢琢磨<br>##域名解析<br>现在进入你的域名服务商，配置好解析到cloudflare，具体方法就在上一步骤中解析页面下方，如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/7.jpg" alt="P7"><br>解析完成后，所有基本设置已经设置完全</p>
+<h1 id="配置CloudFlare-CDN"><a href="#配置CloudFlare-CDN" class="headerlink" title="配置CloudFlare CDN"></a>配置CloudFlare CDN</h1><h2 id="基础操作-初步配置"><a href="#基础操作-初步配置" class="headerlink" title="基础操作-初步配置"></a>基础操作-初步配置</h2><p>前往cloudflare合作平台<a href="https://cdn.bnxb.com/">笨牛网</a>，注册一个账号，完成后登录，然后在域名接入处添加域名,回源方式选择<em>CNAME回源</em>，回源地址请填写你的Github Pages地址或Netlify页面地址<br>然后提交即完成，进入域名管理，解析设置，添加你需要的解析,如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/6.jpg" alt="P6"><br>至于其他设置，可以自己慢慢琢磨</p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>现在进入你的域名服务商，配置好解析到cloudflare，具体方法就在上一步骤中解析页面下方，如下图所示<br><img data-src="https://cdn.jsdelivr.net/gh/anchoret-qg/document@main/hexo/7.jpg" alt="P7"><br>解析完成后，所有基本设置已经设置完全</p>
 <h2 id="进阶CDN设置"><a href="#进阶CDN设置" class="headerlink" title="进阶CDN设置"></a>进阶CDN设置</h2><p>可以加速cloudflare解析速度，等待编写中</p>
 <h1 id="最终提示"><a href="#最终提示" class="headerlink" title="最终提示"></a>最终提示</h1><h2 id="博客存放位置"><a href="#博客存放位置" class="headerlink" title="博客存放位置"></a>博客存放位置</h2><p>默认存放于</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">根目录*\<span class="built_in">source</span>\_posts\*中，使用markdown语法</span><br></pre></td></tr></table></figure>]]></content>
